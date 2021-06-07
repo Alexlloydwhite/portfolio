@@ -14,7 +14,6 @@ import {
   Container,
   Avatar,
   Card,
-  CardHeader,
   CardMedia,
   CardContent,
   CardActions
@@ -24,7 +23,10 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
 // Local Import
 import './App.css';
+import Resume from './Alex White Resume .pdf';
 import LandingImage from './LandingImage.jpg';
+// React Import
+import {useRef} from 'react';
 // Styles
 const useStyles = makeStyles((theme) => ({
   mainFeaturedPost: {
@@ -88,20 +90,36 @@ const useStyles = makeStyles((theme) => ({
     width: 80,
     height: 80,
     marginBottom: theme.spacing(2)
+  },
+  footer: {
+    backgroundColor: '#24292e',
+    padding: theme.spacing(2),
   }
 }))
 export default function App() {
   const classes = useStyles();
+  const about = useRef(null);
+  const portfolio = useRef(null);
   return (
     <div>
       {/* NAVBAR */}
       <div>
         <AppBar elevation={0} className={classes.appBar}>
           <Toolbar>
-            <Typography className={classes.links}>
+            <Typography 
+              variant="h5" 
+              id="rw" 
+              className={classes.links}
+              onClick={() => about.current.scrollIntoView()}
+            >
               About Me
             </Typography>
-            <Typography className={classes.links}>
+            <Typography 
+              variant="h5" 
+              id="rw" 
+              className={classes.links}
+              onClick={() => portfolio.current.scrollIntoView()}
+            >
               Portfolio
             </Typography>
           </Toolbar>
@@ -136,7 +154,11 @@ export default function App() {
                       arrow
                       TransitionComponent={Zoom}
                     >
-                      <Fab color="primary" style={{ marginRight: 10 }}>
+                      <Fab 
+                        color="grey" 
+                        style={{ marginRight: 10 }}
+                        href="https://www.linkedin.com/in/alex-white-92aa88200/"
+                      >
                         <LinkedInIcon />
                       </Fab>
                     </Tooltip>
@@ -145,7 +167,11 @@ export default function App() {
                       arrow
                       TransitionComponent={Zoom}
                     >
-                      <Fab color="primary" style={{ marginRight: 10 }}>
+                      <Fab 
+                        href="https://github.com/Alexlloydwhite" 
+                        color="grey" 
+                        style={{ marginRight: 10 }}
+                      >
                         <GitHubIcon />
                       </Fab>
                     </Tooltip>
@@ -154,7 +180,10 @@ export default function App() {
                       arrow
                       TransitionComponent={Zoom}
                     >
-                      <Fab color="primary">
+                      <Fab 
+                        color="grey"
+                        onClick={() => window.open(Resume)} 
+                      >
                         <PictureAsPdfIcon />
                       </Fab>
                     </Tooltip>
@@ -165,6 +194,7 @@ export default function App() {
           </div>
         </Paper>
       </section>
+      <div  ref={about}></div>
       <section className={classes.root}>
         <Container className={classes.container}>
           <div className={classes.title}>
@@ -232,6 +262,7 @@ export default function App() {
           </Grid>
         </Container>
       </section>
+      <div ref={portfolio}></div>
       <section className={classes.root}>
         <Container className={classes.container}>
           <div className={classes.title}>
@@ -246,7 +277,7 @@ export default function App() {
           </div>
           <Grid container spacing={5} style={{ marginBottom: 50 }}>
             <Grid item xs={12} md={6}>
-              <Card variant="outlined">
+              <Card>
                 <CardMedia
                   component="img"
                   src=""
@@ -255,7 +286,7 @@ export default function App() {
                   <Typography id="rw" variant="h4" gutterBottom>
                     CellarDex
                   </Typography>
-                  <Typography id="rw" variant="h5">
+                  <Typography id="rw" variant="h6">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                   </Typography>
                 </CardContent>
@@ -271,7 +302,7 @@ export default function App() {
               </Card>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Card variant="outlined">
+              <Card>
                 <CardMedia
                   component="img"
                   src="https://user-images.githubusercontent.com/77769682/118414532-be465100-b66a-11eb-9711-c2407968c5a8.png"
@@ -280,7 +311,7 @@ export default function App() {
                   <Typography id="rw" variant="h4" gutterBottom>
                     Movie List
                   </Typography>
-                  <Typography id="rw" variant="h5">
+                  <Typography id="rw" variant="h6">
                     This project solidified my understanding of redux-saga and reducers. Additionally I was able to greatly increase my knowledge of the React library.
                     I began the project with a database of movies. I displayed each movie poster on the DOM with an onClick to display details about the movie. I used params to allow the details page information to persist thru refreshing the browser. From here users are able to click an edit button, I used react-router-dom to direct the user to an edit page to edit details about the movie and post the updates to SQL. On the homepage, I created a search bar that allows users to search for a movie and see the results of the search in real time. There is conditional rendering and local state for search toggle. I built a form page whereby users are able to post new movies to the database, this required SQL joins as the movies and genres are kept in different tables.
                     My favorite part of this application is that has the ability to scale while retaining all base functionality.
@@ -298,7 +329,7 @@ export default function App() {
               </Card>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Card variant="outlined">
+              <Card>
                 <CardMedia
                   component="img"
                   src="https://user-images.githubusercontent.com/77769682/116876870-c326f180-abe2-11eb-86e6-3b37fce8c452.png"
@@ -307,7 +338,7 @@ export default function App() {
                   <Typography id="rw" variant="h4" gutterBottom>
                     Photo Gallery
                   </Typography>
-                  <Typography id="rw" variant="h5">
+                  <Typography id="rw" variant="h6">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                   </Typography>
                 </CardContent>
@@ -323,7 +354,7 @@ export default function App() {
               </Card>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Card variant="outlined">
+              <Card>
                 <CardMedia
                   component="img"
                   src=""
@@ -332,7 +363,7 @@ export default function App() {
                   <Typography id="rw" variant="h4" gutterBottom>
                     Feedback Loop
                   </Typography>
-                  <Typography id="rw" variant="h5">
+                  <Typography id="rw" variant="h6">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                   </Typography>
                 </CardContent>
@@ -348,7 +379,7 @@ export default function App() {
               </Card>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Card variant="outlined">
+              <Card>
                 <CardMedia
                   component="img"
                   src="https://user-images.githubusercontent.com/77769682/116482096-12b79700-a84a-11eb-81c6-b9ff56cdbe2d.png"
@@ -357,7 +388,7 @@ export default function App() {
                   <Typography id="rw" variant="h4" gutterBottom>
                     To Do List
                   </Typography>
-                  <Typography id="rw" variant="h5">
+                  <Typography id="rw" variant="h6">
                     This app allows you to create and manage a to-do list of tasks. You can add, delete, edit, and toggle tasks as complete! This was my final project using jQuery and first project using full stack development. I went into this project with a plan and image of what i wanted the final product to look like, this made it pretty easy to break the project down into small steps and complete all of the features over multiple days. I had goals of challenging my knowledge of CSS and figuring out how to create an edit feature.
 
                     The biggest challenge i faced was the edit feature!! I got it to work but had to refactor several times to simplify the code.
@@ -380,6 +411,15 @@ export default function App() {
           </Grid>
         </Container>
       </section>
+      <footer className={classes.footer}>
+        <Typography 
+          align="center" 
+          style={{ color: 'white' }}
+          id="rw"
+        >
+          Alex White | Alexlloydwhite@gmail.com
+        </Typography>
+      </footer>
     </div >
   );
 }
