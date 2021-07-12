@@ -235,7 +235,7 @@ export default function App() {
                   Front End
                 </Typography>
                 <Typography variant="h6" align="center" id="rw">
-                  I love making things look really good. I highly value user friendly and intuitive design. The frontend framework I am most familiar with is React (functional components with hooks). However, I also have experience working with jQuery.
+                  I love making things look really good. My frontend skills include HTML5, CSS3, Material Design principles, Typescript, and Javascript (ES6) with a heavy focus on React (functional components with hooks and state management with Redux). Additionally i've worked with and built projects using jQuery. 
                 </Typography>
               </div>
             </Grid>
@@ -249,7 +249,7 @@ export default function App() {
                   Back End
                 </Typography>
                 <Typography variant="h6" align="center" id="rw">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  The technologies i've used on the backend include NodeJS, Express, and PostgreSQL with additional exposure to AWS (This site is hosted via Amplify! I've also done storage with S3) and Flask servers with Python. I have experience designing and building RESTFUL APIs as well as working with third party APIs.
                 </Typography>
               </div>
             </Grid>
@@ -263,7 +263,7 @@ export default function App() {
                   Full Stack
                 </Typography>
                 <Typography variant="h6" align="center" id="rw">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  The glue that holds it all together... JSON is my best friend!<br /><br /> Every application in my portfolio is full stack. 
                 </Typography>
               </div>
             </Grid>
@@ -326,8 +326,8 @@ export default function App() {
                   </Typography>
                   <Typography id="rw" variant="h6">
                     Our Economic Lives is a web application that aims to help empower career competencies.
-                    This application has three distinct user types. Admins create career pyramids (content) via CSV upload. 
-                    Coaches invite and manage clients. 
+                    This application has three distinct user types. Admins create career pyramids (content) via CSV upload.
+                    Coaches invite and manage clients.
                     Clients (end users) choose a career pyramid and work through each tier and building block.
 
                   </Typography>
