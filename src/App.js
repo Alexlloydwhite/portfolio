@@ -220,7 +220,7 @@ export default function App() {
               I have experience solving complex business problems, leading and building diverse teams, designing procedures and solutions, and working quickly in fast paced high pressure environments. My emotional intelligence, proven record of success, and attention to detail are what set me apart from my peers.
               <br />
               <br />
-              In my free time i enjoy wine tastings, bouldering, cylcing, cooking, running, and reading a great book.
+              In my free time i enjoy wine tastings, bouldering, cycling, cooking, running, and golfing.
             </Typography>
             <Divider variant="middle" />
           </div>
@@ -235,7 +235,7 @@ export default function App() {
                   Front End
                 </Typography>
                 <Typography variant="h6" align="center" id="rw">
-                  
+                  I love making things look really good. I highly value user friendly and intuitive design. The frontend framework I am most familiar with is React (functional components with hooks). However, I also have experience working with jQuery.
                 </Typography>
               </div>
             </Grid>
@@ -322,7 +322,7 @@ export default function App() {
                 />
                 <CardContent>
                   <Typography id="rw" variant="h4" gutterBottom>
-                    Our Economic Lives
+                    Our Economic Lives (Client Project)
                   </Typography>
                   <Typography id="rw" variant="h6">
                     Our Economic Lives is a web application that aims to help empower career competencies.
