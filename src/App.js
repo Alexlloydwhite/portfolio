@@ -23,7 +23,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
 // Local Import
 import './App.css';
-import Resume from './Alex White Resume .pdf';
+import Resume from './resume.pdf';
 import LandingImage from './LandingImage.jpg';
 import OurEconomicLives from './OurEconomicLives.png';
 // React Import
