@@ -23,7 +23,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
 // Local Import
 import './App.css';
-import Resume from './resume.pdf';
+import Resume from './Alex_White_Resume.pdf';
 import LandingImage from './LandingImage.jpg';
 import OurEconomicLives from './OurEconomicLives.png';
 // React Import
@@ -101,6 +101,10 @@ export default function App() {
   const classes = useStyles();
   const about = useRef(null);
   const portfolio = useRef(null);
+  const openInNewTab = (url) => {
+    const newWindow = window.open(url, '_blank', 'noopener, noreferrer');
+    if (newWindow) newWindow.open = null;
+  }
   return (
     <div>
       {/* NAVBAR */}
@@ -158,7 +162,7 @@ export default function App() {
                       <Fab
                         color="grey"
                         style={{ marginRight: 10 }}
-                        href="https://www.linkedin.com/in/alex-white-92aa88200/"
+                        onClick={() => openInNewTab('https://www.linkedin.com/in/alex-white-92aa88200/</Tooltip>')}
                       >
                         <LinkedInIcon />
                       </Fab>
@@ -169,7 +173,7 @@ export default function App() {
                       TransitionComponent={Zoom}
                     >
                       <Fab
-                        href="https://github.com/Alexlloydwhite"
+                        onClick={() => openInNewTab('https://github.com/Alexlloydwhite')}
                         color="grey"
                         style={{ marginRight: 10 }}
                       >
@@ -183,7 +187,7 @@ export default function App() {
                     >
                       <Fab
                         color="grey"
-                        onClick={() => window.open(Resume)}
+                        onClick={() => openInNewTab(Resume)}
                       >
                         <PictureAsPdfIcon />
                       </Fab>
@@ -304,11 +308,11 @@ export default function App() {
                 <CardActions>
                   <Button
                     startIcon={<GitHubIcon />}
-                    href="https://github.com/Alexlloydwhite/cellardex"
+                    onClick={() => openInNewTab('https://github.com/Alexlloydwhite/cellardex')}
                   >
                     Github Repo
                   </Button>
-                  <Button href="https://cellar-dex.herokuapp.com/">
+                  <Button onClick={() => openInNewTab('https://cellar-dex.herokuapp.com/')}>
                     Deployed App
                   </Button>
                 </CardActions>
@@ -329,18 +333,17 @@ export default function App() {
                     This application has three distinct user types. Admins create career pyramids (content) via CSV upload.
                     Coaches invite and manage clients.
                     Clients (end users) choose a career pyramid and work through each tier and building block.
-
                   </Typography>
                 </CardContent>
                 <Divider variant="middle" />
                 <CardActions>
                   <Button
                     startIcon={<GitHubIcon />}
-                    href="https://github.com/Alexlloydwhite/our-economic-lives"
+                    onClick={() => openInNewTab('https://github.com/Alexlloydwhite/our-economic-lives')}
                   >
                     Github Repo
                   </Button>
-                  <Button href="https://our-economic-lives.herokuapp.com/">
+                  <Button onClick={() => openInNewTab('https://our-economic-lives.herokuapp.com/')}>
                     Deployed App
                   </Button>
                 </CardActions>
@@ -366,11 +369,11 @@ export default function App() {
                 <CardActions>
                   <Button
                     startIcon={<GitHubIcon />}
-                    href="https://github.com/Alexlloydwhite/react-movie-sagas"
+                    onClick={() => openInNewTab('https://github.com/Alexlloydwhite/react-movie-sagas')}
                   >
                     Github Repo
                   </Button>
-                  <Button href="https://vast-taiga-46649.herokuapp.com/">
+                  <Button onClick={() => openInNewTab('https://vast-taiga-46649.herokuapp.com/')}>
                     Deployed App
                   </Button>
                 </CardActions>
@@ -397,7 +400,7 @@ export default function App() {
                 <CardActions>
                   <Button
                     startIcon={<GitHubIcon />}
-                    href="https://github.com/Alexlloydwhite/react-photo-gallery"
+                    onClick={() => openInNewTab('https://github.com/Alexlloydwhite/react-photo-gallery')}
                   >
                     Github Repo
                   </Button>
@@ -424,11 +427,11 @@ export default function App() {
                 <CardActions>
                   <Button
                     startIcon={<GitHubIcon />}
-                    href="https://github.com/Alexlloydwhite/sql-todo-list"
+                    onClick={() => openInNewTab('https://github.com/Alexlloydwhite/sql-todo-list')}
                   >
                     Github Repo
                   </Button>
-                  <Button href="https://arcane-reaches-75890.herokuapp.com/">
+                  <Button onClick={() => openInNewTab('https://arcane-reaches-75890.herokuapp.com/')}>
                     Deployed App
                   </Button>
                 </CardActions>
@@ -443,7 +446,7 @@ export default function App() {
           style={{ color: 'white' }}
           id="rw"
         >
-          Alex White | Alexlloydwhite@gmail.com
+          Alex White | Hire me! | Alexlloydwhite@gmail.com
         </Typography>
       </footer>
     </div >
