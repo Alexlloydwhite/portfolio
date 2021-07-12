@@ -299,8 +299,8 @@ export default function App() {
                     CellarDex
                   </Typography>
                   <Typography id="rw" variant="h6">
-                    CellarDex is a responsive web application, it is designed to be used on either a desktop or mobile phone. This application recommends food and wine pairings and allows users saved pairings and provide personal insights to each recomendation.
-                    The first week (10 hours) was spent scoping and creating wire frames, ERD, and schedule. Scope Document
+                    CellarDex is a responsive web application, it is designed to be used on either a desktop or mobile phone. This application recommends food and wine pairings and allows users to save pairings and provide personal insights to each recommendation.
+                    The first week (10 hours) was spent scoping and creating wire frames, ERD, and schedule.
                     The next 2 weeks were entirely devoted to coding, testing, bug fixing, and implementing the numerous features.
                   </Typography>
                 </CardContent>
@@ -329,7 +329,7 @@ export default function App() {
                     Our Economic Lives (Client Project)
                   </Typography>
                   <Typography id="rw" variant="h6">
-                    Our Economic Lives is a web application that aims to help empower career competencies.
+                    Our Economic Lives is a web application designed and built for a client that offers career services. It aims to help empower career competencies.
                     This application has three distinct user types. Admins create career pyramids (content) via CSV upload.
                     Coaches invite and manage clients.
                     Clients (end users) choose a career pyramid and work through each tier and building block.
