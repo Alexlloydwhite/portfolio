@@ -25,8 +25,9 @@ import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
 import './App.css';
 import Resume from './Alex White Resume .pdf';
 import LandingImage from './LandingImage.jpg';
+import OurEconomicLives from './OurEconomicLives.png';
 // React Import
-import {useRef} from 'react';
+import { useRef } from 'react';
 // Styles
 const useStyles = makeStyles((theme) => ({
   mainFeaturedPost: {
@@ -67,7 +68,7 @@ const useStyles = makeStyles((theme) => ({
   },
   root: {
     display: 'flex',
-    backgroundColor: 'rgba(0,0,0,.1)',
+    backgroundColor: '#F3F5F7',
     overflow: 'hidden',
   },
   container: {
@@ -106,17 +107,17 @@ export default function App() {
       <div>
         <AppBar elevation={0} className={classes.appBar}>
           <Toolbar>
-            <Typography 
-              variant="h5" 
-              id="rw" 
+            <Typography
+              variant="h5"
+              id="rw"
               className={classes.links}
               onClick={() => about.current.scrollIntoView()}
             >
               About Me
             </Typography>
-            <Typography 
-              variant="h5" 
-              id="rw" 
+            <Typography
+              variant="h5"
+              id="rw"
               className={classes.links}
               onClick={() => portfolio.current.scrollIntoView()}
             >
@@ -154,8 +155,8 @@ export default function App() {
                       arrow
                       TransitionComponent={Zoom}
                     >
-                      <Fab 
-                        color="grey" 
+                      <Fab
+                        color="grey"
                         style={{ marginRight: 10 }}
                         href="https://www.linkedin.com/in/alex-white-92aa88200/"
                       >
@@ -167,9 +168,9 @@ export default function App() {
                       arrow
                       TransitionComponent={Zoom}
                     >
-                      <Fab 
-                        href="https://github.com/Alexlloydwhite" 
-                        color="grey" 
+                      <Fab
+                        href="https://github.com/Alexlloydwhite"
+                        color="grey"
                         style={{ marginRight: 10 }}
                       >
                         <GitHubIcon />
@@ -180,9 +181,9 @@ export default function App() {
                       arrow
                       TransitionComponent={Zoom}
                     >
-                      <Fab 
+                      <Fab
                         color="grey"
-                        onClick={() => window.open(Resume)} 
+                        onClick={() => window.open(Resume)}
                       >
                         <PictureAsPdfIcon />
                       </Fab>
@@ -194,7 +195,7 @@ export default function App() {
           </div>
         </Paper>
       </section>
-      <div  ref={about}></div>
+      <div ref={about}></div>
       <section className={classes.root}>
         <Container className={classes.container}>
           <div className={classes.title}>
@@ -212,7 +213,14 @@ export default function App() {
               id="rw"
               style={{ marginBottom: 30 }}
             >
-              Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+              I’m a recent graduate from Prime Digital Academy. I have strong expertise in data structures, Javascript, React, state magenment with Redux, relational databases with PostgreSQL, and servers with NodeJS and Express.
+              <br />
+              <br />
+              Aside from being a student at Prime, I’ve worked at several globally recognized hospitality companies. I’m certainly a junior level Software Engineer however my business and communication skills are non junior level.
+              I have experience solving complex business problems, leading and building diverse teams, designing procedures and solutions, and working quickly in fast paced high pressure environments. My emotional intelligence, proven record of success, and attention to detail are what set me apart from my peers.
+              <br />
+              <br />
+              In my free time i enjoy wine tastings, bouldering, cylcing, cooking, running, and reading a great book.
             </Typography>
             <Divider variant="middle" />
           </div>
@@ -227,7 +235,7 @@ export default function App() {
                   Front End
                 </Typography>
                 <Typography variant="h6" align="center" id="rw">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  
                 </Typography>
               </div>
             </Grid>
@@ -277,17 +285,19 @@ export default function App() {
           </div>
           <Grid container spacing={5} style={{ marginBottom: 50 }}>
             <Grid item xs={12} md={6}>
-              <Card>
+              <Card variant="outlined">
                 <CardMedia
                   component="img"
-                  src=""
+                  src="https://user-images.githubusercontent.com/77769682/121894730-15305c00-cce5-11eb-8521-89f228dcfe2e.png"
                 />
                 <CardContent>
                   <Typography id="rw" variant="h4" gutterBottom>
                     CellarDex
                   </Typography>
                   <Typography id="rw" variant="h6">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    CellarDex is a responsive web application, it is designed to be used on either a desktop or mobile phone. This application recommends food and wine pairings and allows users saved pairings and provide personal insights to each recomendation.
+                    The first week (10 hours) was spent scoping and creating wire frames, ERD, and schedule. Scope Document
+                    The next 2 weeks were entirely devoted to coding, testing, bug fixing, and implementing the numerous features.
                   </Typography>
                 </CardContent>
                 <Divider variant="middle" />
@@ -298,11 +308,46 @@ export default function App() {
                   >
                     Github Repo
                   </Button>
+                  <Button href="https://cellar-dex.herokuapp.com/">
+                    Deployed App
+                  </Button>
                 </CardActions>
               </Card>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Card>
+              <Card variant="outlined">
+                <CardMedia
+                  component="img"
+                  src={OurEconomicLives}
+                />
+                <CardContent>
+                  <Typography id="rw" variant="h4" gutterBottom>
+                    Our Economic Lives
+                  </Typography>
+                  <Typography id="rw" variant="h6">
+                    Our Economic Lives is a web application that aims to help empower career competencies.
+                    This application has three distinct user types. Admins create career pyramids (content) via CSV upload. 
+                    Coaches invite and manage clients. 
+                    Clients (end users) choose a career pyramid and work through each tier and building block.
+
+                  </Typography>
+                </CardContent>
+                <Divider variant="middle" />
+                <CardActions>
+                  <Button
+                    startIcon={<GitHubIcon />}
+                    href="https://github.com/Alexlloydwhite/our-economic-lives"
+                  >
+                    Github Repo
+                  </Button>
+                  <Button href="https://our-economic-lives.herokuapp.com/">
+                    Deployed App
+                  </Button>
+                </CardActions>
+              </Card>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Card variant="outlined">
                 <CardMedia
                   component="img"
                   src="https://user-images.githubusercontent.com/77769682/118414532-be465100-b66a-11eb-9711-c2407968c5a8.png"
@@ -325,11 +370,14 @@ export default function App() {
                   >
                     Github Repo
                   </Button>
+                  <Button href="https://vast-taiga-46649.herokuapp.com/">
+                    Deployed App
+                  </Button>
                 </CardActions>
               </Card>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Card>
+              <Card variant="outlined">
                 <CardMedia
                   component="img"
                   src="https://user-images.githubusercontent.com/77769682/116876870-c326f180-abe2-11eb-86e6-3b37fce8c452.png"
@@ -339,7 +387,10 @@ export default function App() {
                     Photo Gallery
                   </Typography>
                   <Typography id="rw" variant="h6">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    This application is a photo gallery of images from my life in San Francisco.
+                    Users are able to add new images, and like or delete images in the gallery.
+                    This was my first project built with React. During this project I learned Material design principles with MUI,
+                    local state with the React use state hook, and gained valuable knowledge of the React ecosystem.
                   </Typography>
                 </CardContent>
                 <Divider variant="middle" />
@@ -354,32 +405,7 @@ export default function App() {
               </Card>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Card>
-                <CardMedia
-                  component="img"
-                  src=""
-                />
-                <CardContent>
-                  <Typography id="rw" variant="h4" gutterBottom>
-                    Feedback Loop
-                  </Typography>
-                  <Typography id="rw" variant="h6">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </Typography>
-                </CardContent>
-                <Divider variant="middle" />
-                <CardActions>
-                  <Button
-                    startIcon={<GitHubIcon />}
-                    href="https://github.com/Alexlloydwhite/redux-feedback-loop"
-                  >
-                    Github Repo
-                  </Button>
-                </CardActions>
-              </Card>
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <Card>
+              <Card variant="outlined">
                 <CardMedia
                   component="img"
                   src="https://user-images.githubusercontent.com/77769682/116482096-12b79700-a84a-11eb-81c6-b9ff56cdbe2d.png"
@@ -412,8 +438,8 @@ export default function App() {
         </Container>
       </section>
       <footer className={classes.footer}>
-        <Typography 
-          align="center" 
+        <Typography
+          align="center"
           style={{ color: 'white' }}
           id="rw"
         >
