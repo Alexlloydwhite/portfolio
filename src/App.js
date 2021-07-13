@@ -126,7 +126,7 @@ export default function App() {
             </Typography>
             <Typography
               variant="h5"
-              id="rw"
+              id="section-header"
               className={classes.links}
               onClick={() => portfolio.current.scrollIntoView()}
             >
@@ -208,9 +208,9 @@ export default function App() {
         <Container className={classes.container}>
           <div className={classes.title}>
             <Typography
-              variant="h4"
+              variant="h3"
               align="center"
-              id="rw"
+              id="section-header"
               style={{ marginBottom: 30 }}
             >
               About Me
@@ -283,9 +283,9 @@ export default function App() {
         <Container className={classes.container}>
           <div className={classes.title}>
             <Typography
-              variant="h4"
+              variant="h3"
               align="center"
-              id="rw"
+              id="section-header"
               style={{ marginBottom: 30 }}
             >
               Portfolio
