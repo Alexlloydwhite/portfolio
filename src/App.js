@@ -16,7 +16,7 @@ import {
   Card,
   CardMedia,
   CardContent,
-  CardActions
+  CardActions,
 } from '@material-ui/core';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -28,6 +28,7 @@ import LandingImage from './LandingImage.jpg';
 import OurEconomicLives from './OurEconomicLives.png';
 // React Import
 import { useRef } from 'react';
+import { Fade } from "react-awesome-reveal";
 // Styles
 const useStyles = makeStyles((theme) => ({
   mainFeaturedPost: {
@@ -101,10 +102,14 @@ export default function App() {
   const classes = useStyles();
   const about = useRef(null);
   const portfolio = useRef(null);
+
   const openInNewTab = (url) => {
-    const newWindow = window.open(url, '_blank', 'noopener, noreferrer');
-    if (newWindow) newWindow.open = null;
+    const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
+    if (newWindow) {
+      newWindow.open = null;
+    }
   }
+
   return (
     <div>
       {/* NAVBAR */}
@@ -136,64 +141,63 @@ export default function App() {
           <div className={classes.overlay}>
             <Grid container>
               <Grid item xs={12}>
-                <div className={classes.mainFeaturedPostContent}>
-                  <Typography
-                    variant="h4"
-                    align="center"
-                    id="rw"
-                    style={{ marginBottom: 20 }}
-                  >
-                    Alex White
-                  </Typography>
-                  <Typography
-                    variant="h5"
-                    align="center"
-                    id="rw"
-                    style={{ marginBottom: 60 }}
-                  >
-                    Full Stack Software Engineer
-                  </Typography>
-                  <div style={{ textAlign: 'center' }}>
-                    <Tooltip
-                      title="LinkedIn"
-                      arrow
-                      TransitionComponent={Zoom}
+                <Fade cascade delay={300}>
+                  <div className={classes.mainFeaturedPostContent}>
+                    <Typography
+                      variant="h4"
+                      align="center"
+                      id="rw"
+                      style={{ marginBottom: 20 }}
                     >
-                      <Fab
-                        color="grey"
-                        style={{ marginRight: 10 }}
-                        onClick={() => openInNewTab('https://www.linkedin.com/in/alex-white-92aa88200/</Tooltip>')}
-                      >
-                        <LinkedInIcon />
-                      </Fab>
-                    </Tooltip>
-                    <Tooltip
-                      title="Github"
-                      arrow
-                      TransitionComponent={Zoom}
+                      Alex White
+                    </Typography>
+                    <Typography
+                      variant="h5"
+                      align="center"
+                      id="rw"
+                      style={{ marginBottom: 60 }}
                     >
-                      <Fab
-                        onClick={() => openInNewTab('https://github.com/Alexlloydwhite')}
-                        color="grey"
-                        style={{ marginRight: 10 }}
+                      Full Stack Software Engineer
+                    </Typography>
+                    <div style={{ textAlign: 'center' }}>
+                      <Tooltip
+                        title="LinkedIn"
+                        arrow
+                        TransitionComponent={Zoom}
                       >
-                        <GitHubIcon />
-                      </Fab>
-                    </Tooltip>
-                    <Tooltip
-                      title="Resume"
-                      arrow
-                      TransitionComponent={Zoom}
-                    >
-                      <Fab
-                        color="grey"
-                        onClick={() => openInNewTab(Resume)}
+                        <Fab
+                          style={{ marginRight: 10 }}
+                          onClick={() => openInNewTab('https://www.linkedin.com/in/alex-white-92aa88200/</Tooltip>')}
+                        >
+                          <LinkedInIcon />
+                        </Fab>
+                      </Tooltip>
+                      <Tooltip
+                        title="Github"
+                        arrow
+                        TransitionComponent={Zoom}
                       >
-                        <PictureAsPdfIcon />
-                      </Fab>
-                    </Tooltip>
+                        <Fab
+                          onClick={() => openInNewTab('https://github.com/Alexlloydwhite')}
+                          style={{ marginRight: 10 }}
+                        >
+                          <GitHubIcon />
+                        </Fab>
+                      </Tooltip>
+                      <Tooltip
+                        title="Resume"
+                        arrow
+                        TransitionComponent={Zoom}
+                      >
+                        <Fab
+                          onClick={() => openInNewTab(Resume)}
+                        >
+                          <PictureAsPdfIcon />
+                        </Fab>
+                      </Tooltip>
+                    </div>
                   </div>
-                </div>
+                </Fade>
               </Grid>
             </Grid>
           </div>
@@ -239,7 +243,7 @@ export default function App() {
                   Front End
                 </Typography>
                 <Typography variant="h6" align="center" id="rw">
-                  I love making things look really good. My frontend skills include HTML5, CSS3, Material Design principles, Typescript, and Javascript (ES6) with a heavy focus on React (functional components with hooks and state management with Redux). Additionally i've worked with and built projects using jQuery. 
+                  I love making things look really good. My frontend skills include HTML5, CSS3, Material Design principles, Typescript, and Javascript (ES6) with a heavy focus on React (functional components with hooks and state management with Redux). Additionally i've worked with and built projects using jQuery.
                 </Typography>
               </div>
             </Grid>
@@ -267,7 +271,7 @@ export default function App() {
                   Full Stack
                 </Typography>
                 <Typography variant="h6" align="center" id="rw">
-                  The glue that holds it all together... JSON is my best friend!<br /><br /> Every application in my portfolio is full stack. 
+                  The glue that holds it all together... JSON is my best friend!<br /><br /> Every application in my portfolio is full stack.
                 </Typography>
               </div>
             </Grid>
