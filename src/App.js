@@ -450,7 +450,14 @@ export default function App() {
           style={{ color: 'white' }}
           id="rw"
         >
-          Alex White | Hire me! | Alexlloydwhite@gmail.com
+          Alex White | {' '}
+          <a 
+            href="mailto:alexlloydwhite@gmail.com"
+            style={{color: 'white'}}
+            id="rw"
+          >
+            Hire me!
+          </a>
         </Typography>
       </footer>
     </div >
