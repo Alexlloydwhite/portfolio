@@ -184,7 +184,7 @@ export default function App() {
                           <GitHubIcon />
                         </Fab>
                       </Tooltip>
-                      <Tooltip
+                      {/* <Tooltip
                         title="Resume"
                         arrow
                         TransitionComponent={Zoom}
@@ -194,7 +194,7 @@ export default function App() {
                         >
                           <PictureAsPdfIcon />
                         </Fab>
-                      </Tooltip>
+                      </Tooltip> */}
                     </div>
                   </div>
                 </Fade>
