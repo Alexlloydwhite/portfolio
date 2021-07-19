@@ -20,12 +20,17 @@ import {
 } from '@material-ui/core';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
 // Local Import
 import './App.css';
-import Resume from './Alex_White_Resume.pdf';
-import LandingImage from './LandingImage.jpg';
-import OurEconomicLives from './OurEconomicLives.png';
+import LandingImage from './images/LandingImage.jpg';
+import ReactLogo from './images/React-logo.png';
+import NodeLogo from './images/node-logo.png';
+import Handshake from './images/handshake.png';
+import OurEconomicLives from './images/OurEconomicLives.png';
+import CellarDexScreenShot from './images/CellarDex-screenshot.png';
+import ReactMovieScreenShot from './images/React-movie-screenshot.png';
+import PhotoGalleryScreenShot from './images/PhotoGallery-screenshot.png';
+import TodoListScreenShot from './images/TodoList-screenshot.png';
 // React Import
 import { useRef } from 'react';
 import { Fade } from "react-awesome-reveal";
@@ -137,7 +142,7 @@ export default function App() {
       </div>
       <section>
         {/* LANDING HERO */}
-        <Paper className={classes.mainFeaturedPost} style={{ backgroundImage: `url(${LandingImage})` }} >
+        <Paper className={classes.mainFeaturedPost}>
           <div className={classes.overlay}>
             <Grid container>
               <Grid item xs={12}>
@@ -167,7 +172,7 @@ export default function App() {
                       >
                         <Fab
                           style={{ marginRight: 10 }}
-                          onClick={() => openInNewTab('https://www.linkedin.com/in/alex-white-92aa88200/</Tooltip>')}
+                          onClick={() => openInNewTab('https://www.linkedin.com/in/alex-white-92aa88200/')}
                         >
                           <LinkedInIcon />
                         </Fab>
@@ -184,17 +189,6 @@ export default function App() {
                           <GitHubIcon />
                         </Fab>
                       </Tooltip>
-                      {/* <Tooltip
-                        title="Resume"
-                        arrow
-                        TransitionComponent={Zoom}
-                      >
-                        <Fab
-                          onClick={() => openInNewTab(Resume)}
-                        >
-                          <PictureAsPdfIcon />
-                        </Fab>
-                      </Tooltip> */}
                     </div>
                   </div>
                 </Fade>
@@ -236,7 +230,7 @@ export default function App() {
             <Grid item xs={12} md={4}>
               <div className={classes.item}>
                 <Avatar
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png"
+                  src={ReactLogo}
                   className={classes.avatar}
                 />
                 <Typography variant="h5" align="center">
@@ -250,7 +244,7 @@ export default function App() {
             <Grid item xs={12} md={4}>
               <div className={classes.item}>
                 <Avatar
-                  src="https://miro.medium.com/max/3200/1*xdo0UBpyszvD7-7EH4TkIA.png"
+                  src={NodeLogo}
                   className={classes.avatar}
                 />
                 <Typography variant="h5" align="center">
@@ -264,7 +258,7 @@ export default function App() {
             <Grid item xs={12} md={4}>
               <div className={classes.item}>
                 <Avatar
-                  src="https://www.pinclipart.com/picdir/big/550-5502228_handshake-vector-shake-hands-vector-png-clipart.png"
+                  src={Handshake}
                   className={classes.avatar}
                 />
                 <Typography variant="h5" align="center">
@@ -296,7 +290,7 @@ export default function App() {
               <Card variant="outlined">
                 <CardMedia
                   component="img"
-                  src="https://user-images.githubusercontent.com/77769682/121894730-15305c00-cce5-11eb-8521-89f228dcfe2e.png"
+                  src={CellarDexScreenShot}
                 />
                 <CardContent>
                   <Typography id="rw" variant="h4" gutterBottom>
@@ -357,7 +351,7 @@ export default function App() {
               <Card variant="outlined">
                 <CardMedia
                   component="img"
-                  src="https://user-images.githubusercontent.com/77769682/118414532-be465100-b66a-11eb-9711-c2407968c5a8.png"
+                  src={ReactMovieScreenShot}
                 />
                 <CardContent>
                   <Typography id="rw" variant="h4" gutterBottom>
@@ -387,7 +381,7 @@ export default function App() {
               <Card variant="outlined">
                 <CardMedia
                   component="img"
-                  src="https://user-images.githubusercontent.com/77769682/116876870-c326f180-abe2-11eb-86e6-3b37fce8c452.png"
+                  src={PhotoGalleryScreenShot}
                 />
                 <CardContent>
                   <Typography id="rw" variant="h4" gutterBottom>
@@ -415,7 +409,7 @@ export default function App() {
               <Card variant="outlined">
                 <CardMedia
                   component="img"
-                  src="https://user-images.githubusercontent.com/77769682/116482096-12b79700-a84a-11eb-81c6-b9ff56cdbe2d.png"
+                  src={TodoListScreenShot}
                 />
                 <CardContent>
                   <Typography id="rw" variant="h4" gutterBottom>
