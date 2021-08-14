@@ -251,7 +251,7 @@ export default function App() {
                   Back End
                 </Typography>
                 <Typography variant="h6" align="center" id="rw">
-                  The technologies i've used on the backend include NodeJS, Express, and PostgreSQL with additional exposure to AWS (This site is hosted via Amplify! I've also done storage with S3) and Flask servers with Python. I have experience designing and building RESTFUL APIs as well as working with third party APIs.
+                  The technologies i've used on the backend include NodeJS, Express, and PostgreSQL with additional exposure to AWS (including S3, Lambda, DyanmoDB, Amplify, CloudWatch, and IAM) and Flask servers with Python. I have experience designing and building RESTFUL APIs as well as working with third party APIs.
                 </Typography>
               </div>
             </Grid>
