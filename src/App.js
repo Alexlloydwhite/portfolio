@@ -24,7 +24,7 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import "./App.css";
 import LandingImage from "./images/LandingImage.jpg";
 import ReactLogo from "./images/React-logo.png";
-import NodeLogo from "./images/node-logo.png";
+import JavaLogo from "./images/java.png"
 import Handshake from "./images/handshake.png";
 import OurEconomicLives from "./images/OurEconomicLives.png";
 import CellarDexScreenShot from "./images/CellarDex-screenshot.png";
@@ -218,16 +218,7 @@ export default function App() {
               id="rw"
               style={{ marginBottom: 30 }}
             >
-              I’m a recent graduate from Prime Digital Academy. I have strong
-              expertise in data structures, Javascript, React, state magenment
-              with Redux, relational databases with PostgreSQL, and servers with
-              NodeJS and Express.
-              <br />
-              <br />
-              Aside from being a student at Prime, I’ve worked at several
-              globally recognized hospitality companies. I’m certainly a junior
-              level Software Engineer however my business and communication
-              skills are non junior level. I have experience solving complex
+              I have experience solving complex
               business problems, leading and building diverse teams, designing
               procedures and solutions, and working quickly in fast paced high
               pressure environments. My emotional intelligence, proven record of
@@ -249,8 +240,8 @@ export default function App() {
                 </Typography>
                 <Typography variant="h6" align="center" id="rw">
                   I love making things look really good. My frontend skills
-                  include HTML5, CSS3, Material Design principles, Typescript,
-                  and Javascript (ES6) with a heavy focus on React (functional
+                  include Material Design principles, TypeScript,
+                  and JavaScript (ES6) with a heavy focus on React (functional
                   components with hooks and state management with Redux).
                   Additionally i've worked with and built projects using jQuery.
                 </Typography>
@@ -258,17 +249,16 @@ export default function App() {
             </Grid>
             <Grid item xs={12} md={4}>
               <div className={classes.item}>
-                <Avatar src={NodeLogo} className={classes.avatar} />
+                <Avatar src={JavaLogo} className={classes.avatar} />
                 <Typography variant="h5" align="center">
                   Back End
                 </Typography>
                 <Typography variant="h6" align="center" id="rw">
-                  The technologies i've used on the backend include NodeJS,
-                  Express, and PostgreSQL with additional exposure to AWS
-                  (including S3, Lambda, DyanmoDB, Amplify, CloudWatch, and IAM)
-                  and Flask servers with Python. I have experience designing and
-                  building RESTFUL APIs as well as working with third party
-                  APIs.
+                  The technologies i've used on the backend include JavaScript (Node / Express), 
+                  Java (Spring / Micronaut), Groovy (Spock), and databases (relational / nosql). I have extensive experience 
+                  working with cloud technologies including AWS (Lambda, EC2, CloudWatch, IAM, DyanmoDB, Amplify, S3) 
+                  and GCP (CloudRun, Cloud Build, BigQuery). Additionally, I have experience with CI/CD tools including 
+                  Jenkins and Github Actions. Lastly, I have basic working knowledge Docker and RabbitMQ.
                 </Typography>
               </div>
             </Grid>
@@ -276,12 +266,10 @@ export default function App() {
               <div className={classes.item}>
                 <Avatar src={Handshake} className={classes.avatar} />
                 <Typography variant="h5" align="center">
-                  Full Stack
+                  Methodologies
                 </Typography>
                 <Typography variant="h6" align="center" id="rw">
-                  The glue that holds it all together... JSON is my best friend!
-                  <br />
-                  <br /> Every application in my portfolio is full stack.
+                  I practice Pair Programming, Extreme Programming, and Test Driven Development.
                 </Typography>
               </div>
             </Grid>
@@ -559,7 +547,7 @@ export default function App() {
             style={{ color: "white" }}
             id="rw"
           >
-            Hire me!
+            Contact me
           </a>
         </Typography>
       </footer>
